@@ -16,7 +16,6 @@ import android.widget.ImageView;
 public class MainActivity extends ActionBarActivity {
 
     private Button buttonCam;
-    private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
     private Uri fileUri;
     private ImageView imageHold;
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -43,7 +42,9 @@ public class MainActivity extends ActionBarActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             imageHold.setImageBitmap(imageBitmap);
-        }
+
+
+          }
     }
 
 

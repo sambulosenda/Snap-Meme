@@ -10,6 +10,7 @@ import android.widget.ImageView;
 public class MemeSnap extends ActionBarActivity {
 
     private ImageView imageHold;
+    String path = getIntent().getStringExtra("image");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
