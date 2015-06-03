@@ -5,8 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements TopFragment.TopInterface{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,4 +34,9 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-}
+
+    @Override
+    public void meme(String top, String bottom) {
+        BottomFragment bottomFragment = (BottomFragment)getSupportFragmentManager().findFragmentById(R.id.fragment2);
+        bottomFragment.setmeme(top, bottom);
+    }
