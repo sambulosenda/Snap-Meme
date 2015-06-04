@@ -10,6 +10,7 @@
 
 
     <TextView
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$NAPWEWE"
@@ -22,37 +23,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Camera"
+        android:background="@drawable/mybutton"
+        android:padding="10dp"
+        android:textColor="#ffffff"
         android:onClick="takePhoto"
         android:id="@+id/button"
+        android:layout_marginTop="66dp"
         android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="65dp" />
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Galery"
+        android:text="Gallery"
         android:id="@+id/button2"
+        android:background="@drawable/mybutton"
+        android:padding="10dp"
+        android:textColor="#ffffff"
         android:layout_alignTop="@+id/button"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Preset"
+        android:background="@drawable/mybutton"
+        android:padding="10dp"
+        android:textColor="#ffffff"
         android:id="@+id/button3"
         android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="favorite"
         android:id="@+id/button4"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:background="@drawable/mybutton"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/button3"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
 </RelativeLayout>
