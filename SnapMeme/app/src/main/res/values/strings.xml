@@ -3,4 +3,6 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="meme_me">Meme me</string>
+    <string name="memeify">memeify</string>
 </resources>
