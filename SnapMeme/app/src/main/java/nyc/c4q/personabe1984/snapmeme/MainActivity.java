@@ -1,17 +1,27 @@
 package nyc.c4q.personabe1984.snapmeme;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.facebook.FacebookSdk;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent shareIntent = new Intent();
+        shareIntent.setAction(Intent.ACTION_SEND);
+        //shareIntent.putExtra(Intent.EXTRA_STREAM, uriToImage);
+        shareIntent.setType("image/jpeg");
+        //startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_to)));
     }
 
     @Override
