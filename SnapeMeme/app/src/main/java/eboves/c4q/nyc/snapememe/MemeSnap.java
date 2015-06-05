@@ -51,36 +51,32 @@ public class MemeSnap extends ActionBarActivity {
 
     }
 
-//    public void displayCameraBitmap() {
-//        int degree = 0;
-//        try {
-//            ExifInterface exifInterface = new ExifInterface(file.getAbsolutePath());
-//            int orientation =   exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION, 0);
-//            switch (orientation){
-//                case ExifInterface.ORIENTATION_ROTATE_90:
-//                    degree = 90;
-//                    break;
-//                case ExifInterface.ORIENTATION_ROTATE_180:
-//                    degree = 180;
-//                    break;
-//                case ExifInterface.ORIENTATION_ROTATE_270:
-//                    degree = 270;
-//                    break;
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//        BitmapFactory.Options options = new BitmapFactory.Options();
-//        // INSTEAD OF FILE GET IT FROM BUNDLE
-//        Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
-//
-////        MemeSnap memeSnapClass = new MemeSnap();
-////
-////        memeSnapClass.onCreate(Bundle.);
-//
-//        imageHold.setImageDrawable(new FakeBitmapDrawable(bitmap, degree));
-//    }
+    public void displayCameraBitmap() {
+        int degree = 0;
+        try {
+            ExifInterface exifInterface = new ExifInterface(file.getPath());
+            int orientation =   exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION, 0);
+            switch (orientation){
+                case ExifInterface.ORIENTATION_ROTATE_90:
+                    degree = 90;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_180:
+                    degree = 180;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_270:
+                    degree = 270;
+                    break;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        // INSTEAD OF FILE GET IT FROM BUNDLE
+        Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
+
+        imageHold.setImageDrawable(new FakeBitmapDrawable(bitmap, degree));
+    }
 
 }

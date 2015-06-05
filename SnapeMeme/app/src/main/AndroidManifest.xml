@@ -3,8 +3,8 @@
     package="eboves.c4q.nyc.snapememe" >
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +23,10 @@
         <activity
             android:name=".MemeSnap"
             android:label="@string/title_activity_meme_snap" >
+        </activity>
+        <activity
+            android:name=".ExistingMemes"
+            android:label="@string/title_activity_existing_memes" >
         </activity>
     </application>
 

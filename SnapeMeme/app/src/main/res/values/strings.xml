@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">SnapeMeme</string>
+    <string name="title_activity_meme_snap">MemeSnap</string>
+    <string name="title_activity_existing_memes">ExistingMemes</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_meme_snap">MemeSnap</string>
 </resources>
