@@ -14,10 +14,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -33,11 +36,10 @@ public class MainActivity extends ActionBarActivity {
     private ImageView ivGallery;
     private ImageView ivExisting;
     Uri capturedImageUri;
+    MemeSnap memeSnapClass = new MemeSnap();
     private ImageView pictureHolder;
-     MemeSnap memeSnapClass = new MemeSnap();
 
-    // onCreate should set the stage for gallery access, camera access and existing meme access
-    // Basically 3 intents
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +82,6 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View view) {
 
                 Intent intentGallery = new Intent(MainActivity.this, MemeSnap.class);
-              //memeSnapClass.displayCameraBitmap();
                 startActivity(intentGallery);
             }
         });
@@ -92,6 +93,7 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View view) {
 
                 Intent intentExisting = new Intent(MainActivity.this, MemeSnap.class);
+
                 startActivity(intentExisting);
             }
         });
@@ -102,45 +104,44 @@ public class MainActivity extends ActionBarActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode== Activity.RESULT_OK)
         {
-            System.out.println("data(CAMERA_IMAGES_REQUEST):"+data);
-            if(data != null)
-            {
-                Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-                pictureHolder.setImageBitmap(thumbnail);
-            }
-            else
-            {
-                memeSnapClass.displayCameraBitmap();
 
-            }
+
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            displayCameraBitmap();
+            Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+            thumbnail.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            byte[] byteArray = stream.toByteArray();
+            Intent in1 = new Intent(this, MemeSnap.class);
+            in1.putExtra("image",byteArray);
+
 
         }
     }
 
-//    private void displayCameraBitmap() {
-//        int degree = 0;
-//        try {
-//            ExifInterface exifInterface = new ExifInterface(file);
-//            int orientation =   exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION, 0);
-//            switch (orientation){
-//                case ExifInterface.ORIENTATION_ROTATE_90:
-//                    degree = 90;
-//                    break;
-//                case ExifInterface.ORIENTATION_ROTATE_180:
-//                    degree = 180;
-//                    break;
-//                case ExifInterface.ORIENTATION_ROTATE_270:
-//                    degree = 270;
-//                    break;
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        BitmapFactory.Options options = new BitmapFactory.Options();
-//        // INSTEAD OF FILE GET IT FROM BUNDLE
-//        Bitmap bitmap = BitmapFactory.decodeFile(file, options);
-//        pictureHolder.setImageDrawable(new FakeBitmapDrawable(bitmap, degree));
-//    }
+    private void displayCameraBitmap() {
+        int degree = 0;
+        try {
+            ExifInterface exifInterface = new ExifInterface(file);
+            int orientation =   exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION, 0);
+            switch (orientation){
+                case ExifInterface.ORIENTATION_ROTATE_90:
+                    degree = 90;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_180:
+                    degree = 180;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_270:
+                    degree = 270;
+                    break;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        // INSTEAD OF FILE GET IT FROM BUNDLE
+        Bitmap bitmap = BitmapFactory.decodeFile(file, options);
+        pictureHolder.setImageDrawable(new FakeBitmapDrawable(bitmap, degree));
+    }
 
 }
