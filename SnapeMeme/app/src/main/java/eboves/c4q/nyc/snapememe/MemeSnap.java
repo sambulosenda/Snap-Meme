@@ -17,7 +17,7 @@ public class MemeSnap extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meme_snap);
 
-        imageHold = (ImageView)findViewById(R.id.imageHolder);
+        imageHold = (ImageView)findViewById(R.id.ivHolder);
 
     }
 

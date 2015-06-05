@@ -11,7 +11,6 @@
 
 
     <TextView
-        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
@@ -25,29 +24,28 @@
     <ImageView
         android:layout_width="140dp"
         android:layout_height="200dp"
-        android:id="@+id/ivCamera"
+        android:id="@+id/camera"
         android:src="@drawable/takephotofinal"
-        android:layout_below="@+id/tvSnapMeme"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp" />
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="140dp"
         android:layout_height="200dp"
-        android:id="@+id/ivGallery"
+        android:id="@+id/gallery"
         android:src="@drawable/galleryfinaldone"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="140dp"
         android:layout_height="200dp"
         android:id="@+id/ivPreset"
         android:src="@drawable/presetfinal"
-        android:layout_below="@+id/ivCamera"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignTop="@+id/gallery"
+        android:layout_toRightOf="@+id/tvSnapMeme"
+        android:layout_toEndOf="@+id/tvSnapMeme" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,9 +53,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Camera"
         android:id="@+id/textView2"
-        android:layout_alignBottom="@+id/ivCamera"
-        android:layout_alignRight="@+id/ivCamera"
-        android:layout_alignEnd="@+id/ivCamera"
+        android:layout_alignBottom="@+id/camera"
+        android:layout_alignRight="@+id/camera"
+        android:layout_alignEnd="@+id/camera"
         android:layout_marginLeft="35dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -69,19 +67,18 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Gallery"
         android:id="@+id/textView3"
-        android:layout_marginLeft="40dp"
-        android:layout_above="@+id/ivPreset"
-        android:layout_alignLeft="@+id/ivGallery"
-        android:layout_alignStart="@+id/ivGallery" />
+        android:layout_alignTop="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Exiting m3Me"
+        android:text="Preset m3Me"
         android:id="@+id/textView4"
         android:layout_alignBottom="@+id/ivPreset"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/ivPreset"
+        android:layout_alignStart="@+id/ivPreset" />
 
 
 </RelativeLayout>
