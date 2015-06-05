@@ -41,7 +41,7 @@
     <ImageView
         android:layout_width="140dp"
         android:layout_height="200dp"
-        android:id="@+id/ivPreset"
+        android:id="@+id/ivExisting"
         android:src="@drawable/presetfinal"
         android:layout_alignTop="@+id/gallery"
         android:layout_toRightOf="@+id/tvSnapMeme"
@@ -76,9 +76,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Preset m3Me"
         android:id="@+id/textView4"
-        android:layout_alignBottom="@+id/ivPreset"
-        android:layout_alignLeft="@+id/ivPreset"
-        android:layout_alignStart="@+id/ivPreset" />
+        android:layout_alignBottom="@+id/ivExisting"
+        android:layout_alignLeft="@+id/ivExisting"
+        android:layout_alignStart="@+id/ivExisting" />
 
 
 </RelativeLayout>

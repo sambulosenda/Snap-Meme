@@ -28,6 +28,9 @@ public class MainActivity extends ActionBarActivity {
     private File file;
     private ImageView imageHold;
     private ImageView ivCamera;
+    private ImageView ivGallery;
+    private ImageView ivExisting;
+   // MemeSnap memeSnapClass = new MemeSnap();
 
     // onCreate should set the stage for gallery access, camera access and existing meme access
     // Basically 3 intents
@@ -36,6 +39,9 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/myImage.jpg");
+
+
+      //  memeSnapClass.displayCameraBitmap();
         displayCameraBitmap();
 
         ivCamera = (ImageView) findViewById(R.id.ivCamera);
@@ -52,13 +58,34 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+        ivGallery = (ImageView) findViewById(R.id.ivGallery);
+        ivGallery.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intentGallery = new Intent(MainActivity.this, MemeSnap.class);
+                startActivity(intentGallery);
+            }
+        });
+
+        ivExisting = (ImageView) findViewById(R.id.ivExisting);
+        ivExisting.setOnClickListener(new View.OnClickListener() {
+            
+            @Override
+            public void onClick(View view) {
+
+                Intent intentExisting = new Intent(MainActivity.this, MemeSnap.class);
+                startActivity(intentExisting);
+            }
+        });
+
     }
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            //memeSnapClass.displayCameraBitmap();
             displayCameraBitmap();
             // HERE WE PUT THE INTENT TO GO TO THE VANILLA OR DEMOTIVATIONAL
             // HERE PUT EXTRA WITH THE IMAGE THAT YOU JUST TOOK
@@ -85,11 +112,11 @@ public class MainActivity extends ActionBarActivity {
             e.printStackTrace();
         }
 
+
         BitmapFactory.Options options = new BitmapFactory.Options();
         // INSTEAD OF FILE GET IT FROM BUNDLE
         Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
-//        imageHold.setImageDrawable(new FakeBitmapDrawable(bitmap, degree));
-
+        //imageHold.setImageDrawable(new FakeBitmapDrawable(bitmap, degree));
     }
 
 }
