@@ -20,7 +20,6 @@ import java.io.IOException;
 
 public class MemeSnap extends ActionBarActivity {
 
-    private File file;
     protected ImageView imageHold;
     private Button buttonVanella;
     private Button buttonDemotivational;
@@ -29,11 +28,34 @@ public class MemeSnap extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meme_snap);
-        imageHold = (ImageView)findViewById(R.id.ivHolder);
 
+
+        imageHold = (ImageView)findViewById(R.id.ivHolder);
+        Intent saveImg = new Intent(this, MainActivity.class);
+        //Uri saveImage = saveImg.
+
+
+
+
+
+
+        //imageHold = (ImageView)findViewById(R.id.ivHolder);
         byte[] byteArray = getIntent().getByteArrayExtra("image");
         Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
         imageHold.setImageBitmap(bmp);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         buttonVanella = (Button) findViewById(R.id.btVanella);
         buttonVanella.setOnClickListener(new View.OnClickListener() {

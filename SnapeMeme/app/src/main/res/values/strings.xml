@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SnapeMeme</string>
+    <string name="app_name">SnapMeme</string>
     <string name="title_activity_meme_snap">MemeSnap</string>
     <string name="title_activity_existing_memes">ExistingMemes</string>
 

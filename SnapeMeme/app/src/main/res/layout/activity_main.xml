@@ -47,7 +47,8 @@
         android:id="@+id/ivExisting"
         android:src="@drawable/presetfinal"
         android:layout_below="@+id/ivCamera"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,7 +82,18 @@
         android:text="Existing m3Me"
         android:id="@+id/textView4"
         android:layout_alignBottom="@+id/ivExisting"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivMain"
+        android:layout_above="@+id/textView4"
+        android:layout_marginBottom="46dp"
+
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
 
 
 </RelativeLayout>
