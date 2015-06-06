@@ -1,27 +1,49 @@
 package nyc.c4q.personabe1984.snapmeme;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.net.Uri;
+import android.os.Environment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends Activity implements TopFragment.TopInterface {
+
+    LinearLayout memeView;
+    Bitmap bmp;
+    int mvWidth, mvHeight;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Bitmap bmp = Bitmap.createBitmap(mEditText.getDrawingCache());
+        memeView = (LinearLayout) findViewById(R.id.memeView);
+        mvWidth = memeView.getWidth();
+        mvHeight = memeView.getHeight();
 
-        Bitmap combined = Draw(bgBitmap, bmp);
+        bmp = screenView(memeView, mvWidth, mvHeight);
 
+
+//        I am saving this code since I want to work on it in the future.
+//        Bitmap combined = Draw(bgBitmap, bmp);
 //        Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.hansface);
 //        Bitmap alteredBitmap = Bitmap.createBitmap(bm.getWidth(), bm.getHeight(), bm.getConfig());
 //        Canvas canvas = new Canvas(alteredBitmap);
@@ -30,6 +52,58 @@ public class MainActivity extends Activity implements TopFragment.TopInterface {
 //        paint.setColor(Color.BLACK);
 //        paint.setTextSize(20);
 //        canvas.drawText("Some Text", 10, 25, paint);
+    }
+
+    // The condensed version of Draw class
+    public static Bitmap screenView(View v, int width, int height) {
+        Bitmap screenshot = Bitmap.createBitmap(width , height, Bitmap.Config.ARGB_8888);
+        Canvas c = new Canvas(screenshot);
+        v.layout(0, 0, v.getLayoutParams().width, v.getLayoutParams().height);
+        v.draw(c);
+        return screenshot;
+    }
+
+    public void SaveButton(View memeView, int width, int height) {
+
+
+        Bitmap sharable = screenView(memeView, width, height);
+
+        String imageFileName = new SimpleDateFormat("yyyy-MM-dd HH.mm.ss").format(new Date());
+
+        String filename = "Snapmeme" + imageFileName + ".jpeg";
+        String directory = "memefyme";
+        String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + File.separator + directory;
+        File outputDir= new File(path);
+
+        outputDir.mkdirs();
+        File newFile = new File(path+"/"+ filename);
+        Uri resultUri = Uri.fromFile(newFile);
+
+        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        mediaScanIntent.setData(resultUri);
+        this.sendBroadcast(mediaScanIntent);
+
+        FileOutputStream out = null;
+        try {
+            out = new FileOutputStream(newFile);
+            sharable.compress(Bitmap.CompressFormat.JPEG, 100, out);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (out != null) {
+                    out.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+        Intent intent = new Intent(this, ShareActivity.class);
+        intent.putExtra("uri", resultUri);
+        startActivity(intent);
+
     }
 
     @Override
@@ -54,15 +128,14 @@ public class MainActivity extends Activity implements TopFragment.TopInterface {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
     public void meme(String top, String bottom) {
-        BottomFragment bottomFragment = (BottomFragment) getSupportFragmentManager().findFragmentById(R.id.fragment2);
+        BottomFragment bottomFragment = (BottomFragment) getFragmentManager().findFragmentById(R.id.fragment2);
         bottomFragment.setmeme(top, bottom);
     }
 }
 
 /*
-This is what I have been going through 
+resources:
 http://developer.android.com/reference/android/view/View.html#getDrawingCache()
 http://code.neenbedankt.com/how-to-render-an-android-view-to-a-bitmap/
 http://developer.android.com/guide/topics/graphics/2d-graphics.html#drawables

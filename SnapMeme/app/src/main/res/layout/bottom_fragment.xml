@@ -3,7 +3,7 @@
     android:id="@+id/bottom_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hansface">
+    android:background="@drawable/hansfaces">
 
     <TextView
         android:layout_width="match_parent"
