@@ -88,7 +88,6 @@ public class MainActivity extends ActionBarActivity {
 
         ivExisting = (ImageView) findViewById(R.id.ivExisting);
         ivExisting.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
 
