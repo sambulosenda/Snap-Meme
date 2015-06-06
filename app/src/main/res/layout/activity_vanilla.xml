@@ -1,0 +1,32 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="gmsyrimis.c4q.nyc.cammy.VanillaActivity"
+    android:padding="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:id="@+id/vanilla_custom_image">
+
+    <EditText
+        android:id="@+id/vanilla_top_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="BOUGHT A LEASH"
+        android:textColor="#ffffff"
+        android:textSize="50dp"
+        android:layout_weight="1"
+        android:gravity="center|top"/>
+
+
+    <EditText
+        android:id="@+id/vanilla_bottom_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="HAS A CAT"
+        android:textColor="#ffffff"
+        android:textSize="50dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"/>
+</LinearLayout>

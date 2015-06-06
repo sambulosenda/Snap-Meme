@@ -1,0 +1,41 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context="gmsyrimis.c4q.nyc.cammy.DemotivationalActivity">
+
+    <ImageView
+        android:layout_width="330dp"
+        android:layout_height="210dp"
+        android:id="@+id/demotivational_custom_image"
+        android:background="#383838"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="COLLEGE GRADUATE"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="#000000"
+        android:id="@+id/demotivational_top_text"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="can't tie his shoes"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="#000000"
+        android:id="@+id/demotivational_bottom_text"/>
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context="gmsyrimis.c4q.nyc.cammy.SelectStyleActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Style"
+        android:textSize="60dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:background="#000000"
+        android:layout_margin="5dp"
+        android:id="@+id/choose_vanilla"/>
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:background="#383838"
+        android:layout_margin="5dp"
+        android:id="@+id/choose_demotivational"/>
+    </LinearLayout>
+</LinearLayout>
