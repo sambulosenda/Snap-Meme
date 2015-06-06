@@ -5,20 +5,28 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    private EditText mUsername;
+    private EditText mName;
     private EditText mAge;
     private Button mCreateUser;
     private static int mUserCount;
     private List<User> userList = null;
-    private SharedPreferences mSharedPreference;
+    private TextView userCount;
+    private Spinner mSpinner;
+//  private SharedPreferences mSharedPreference;
 
 
 
@@ -27,6 +35,14 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mCreateUser = (Button) findViewById(R.id.submit);
+        mName = (EditText)findViewById(R.id.username);
+        mAge = (EditText) findViewById(R.id.userage);
+        mSpinner = (Spinner)findViewById(R.id.spinner);
+        userCount = (TextView)findViewById(R.id.count);
+
+        userList = new ArrayList<>();
+        ArrayAdapter<User> adapter = new ArrayAdapter<User>(MainActivity.this, android.R.layout.simple_list_item_1, userList);
     }
 
     @Override

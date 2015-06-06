@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import java.io.File;
@@ -29,6 +30,7 @@ public class MainActivity extends Activity implements TopFragment.TopInterface {
     Bitmap bmp;
     int mvWidth, mvHeight;
 
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,53 @@ public class MainActivity extends Activity implements TopFragment.TopInterface {
         mvHeight = memeView.getHeight();
 
         bmp = screenView(memeView, mvWidth, mvHeight);
+        makememebutton = (Button) findViewById(R.id.memeify);
+
+        makememebutton.setOnClickListener(new View.OnClickListener(){
+
+            public void SaveButton(View memeView, int width, int height){
+
+
+                Bitmap sharable = screenView(memeView, width, height);
+
+                String imageFileName = new SimpleDateFormat("yyyy-MM-dd HH.mm.ss").format(new Date());
+
+                String filename = "Snapmeme" + imageFileName + ".jpeg";
+                String directory = "memefyme";
+                String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + File.separator + directory;
+                File outputDir = new File(path);
+
+                outputDir.mkdirs();
+                File newFile = new File(path + "/" + filename);
+                Uri resultUri = Uri.fromFile(newFile);
+
+                Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                mediaScanIntent.setData(resultUri);
+                this.sendBroadcast(mediaScanIntent);
+
+                FileOutputStream out = null;
+                try {
+                    out = new FileOutputStream(newFile);
+                    sharable.compress(Bitmap.CompressFormat.JPEG, 100, out);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        if (out != null) {
+                            out.close();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+
+                Intent intent = new Intent(this, ShareActivity.class);
+                intent.putExtra("uri", resultUri);
+                startActivity(intent);
+
+
+            }
 
 
 //        I am saving this code since I want to work on it in the future.
@@ -63,48 +112,7 @@ public class MainActivity extends Activity implements TopFragment.TopInterface {
         return screenshot;
     }
 
-    public void SaveButton(View memeView, int width, int height) {
 
-
-        Bitmap sharable = screenView(memeView, width, height);
-
-        String imageFileName = new SimpleDateFormat("yyyy-MM-dd HH.mm.ss").format(new Date());
-
-        String filename = "Snapmeme" + imageFileName + ".jpeg";
-        String directory = "memefyme";
-        String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + File.separator + directory;
-        File outputDir= new File(path);
-
-        outputDir.mkdirs();
-        File newFile = new File(path+"/"+ filename);
-        Uri resultUri = Uri.fromFile(newFile);
-
-        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-        mediaScanIntent.setData(resultUri);
-        this.sendBroadcast(mediaScanIntent);
-
-        FileOutputStream out = null;
-        try {
-            out = new FileOutputStream(newFile);
-            sharable.compress(Bitmap.CompressFormat.JPEG, 100, out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (out != null) {
-                    out.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-
-        Intent intent = new Intent(this, ShareActivity.class);
-        intent.putExtra("uri", resultUri);
-        startActivity(intent);
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
