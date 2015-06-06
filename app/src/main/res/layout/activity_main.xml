@@ -10,7 +10,7 @@
         android:id="@+id/iv_camera"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/ic_camera2"
+        android:src="@drawable/camera"
         android:background="#383838"
         android:layout_margin="2dp"
         />
@@ -18,7 +18,7 @@
         android:id="@+id/iv_gallery"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/ic_gallery"
+        android:src="@drawable/galleryfinal"
         android:background="#383838"
         android:layout_margin="2dp"
         />

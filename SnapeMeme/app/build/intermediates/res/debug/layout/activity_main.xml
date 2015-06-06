@@ -1,0 +1,100 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/backgroundfinal">
+
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="$NAPm3Me"
+        android:textSize="50dp"
+        android:id="@+id/tvSnapMeme"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:id="@+id/ivCamera"
+        android:src="@drawable/takephotofinal"
+        android:layout_below="@+id/tvSnapMeme"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:id="@+id/ivGallery"
+        android:src="@drawable/galleryfinaldone"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:id="@+id/ivExisting"
+        android:src="@drawable/presetfinal"
+        android:layout_below="@+id/ivCamera"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Camera"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/ivCamera"
+        android:layout_alignRight="@+id/ivCamera"
+        android:layout_alignEnd="@+id/ivCamera"
+        android:layout_marginLeft="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Gallery"
+        android:id="@+id/textView3"
+        android:layout_marginLeft="40dp"
+        android:layout_above="@+id/ivExisting"
+        android:layout_alignLeft="@+id/ivGallery"
+        android:layout_alignStart="@+id/ivGallery" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Existing m3Me"
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/ivExisting"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivMain"
+        android:layout_above="@+id/textView4"
+        android:layout_marginBottom="46dp"
+
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+
+</RelativeLayout>
+<!-- From: file:/Users/elvisboves/Desktop/Snap-Meme/SnapeMeme/app/src/main/res/layout/activity_main.xml -->

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/elvisboves/Desktop/Snap-Meme/SnapeMeme/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/elvisboves/Desktop/Snap-Meme/SnapeMeme/app/build/intermediates/pre-dexed/debug/classes-31ff45def238a93b68f1422f9f25c5b710bae01c.jar" />
+    </item>
+    <item
+        jar="/Users/elvisboves/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="/Users/elvisboves/Desktop/Snap-Meme/SnapeMeme/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-9053469e9c09e5cb780f0bbec22e53ace7a7d040.jar" />
+    </item>
+    <item
+        jar="/Users/elvisboves/Desktop/Snap-Meme/SnapeMeme/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Users/elvisboves/Desktop/Snap-Meme/SnapeMeme/app/build/intermediates/pre-dexed/debug/classes-52b64248df4378d294ca03228cc815d2122231dd.jar" />
+    </item>
+    <item
+        jar="/Users/elvisboves/Desktop/Snap-Meme/SnapeMeme/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/elvisboves/Desktop/Snap-Meme/SnapeMeme/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-3a920ee9574d650c490a67c38f3565199e8ed3d1.jar" />
+    </item>
+
+</items>
