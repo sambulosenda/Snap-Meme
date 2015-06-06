@@ -1,0 +1,64 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+
+
+        tools:context="gmsyrimis.c4q.nyc.cammy.VanillaActivity"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vanilla_custom_image">
+
+            <EditText
+                android:id="@+id/vanilla_top_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BOUGHT A LEASH"
+                android:textColor="#ffffff"
+                android:textSize="50dp"
+                android:layout_weight="1"
+                android:gravity="center|top"/>
+
+
+            <EditText
+                android:id="@+id/vanilla_bottom_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HAS A CAT"
+                android:textColor="#ffffff"
+                android:textSize="50dp"
+                android:layout_weight="1"
+                android:gravity="center|bottom"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/memeify"
+            android:text="@string/memeify"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>
+
+
+
+<!-- From: file:/Users/c4q-vanice/Desktop/Snap-Meme/app/src/main/res/layout/activity_vanilla.xml -->
