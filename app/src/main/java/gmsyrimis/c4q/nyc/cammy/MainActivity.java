@@ -13,6 +13,7 @@ public class MainActivity extends Activity {
 
     ImageView gotoCamera;
     ImageView gotoGallery;
+    ImageView gotoPop;
 
     private String imageUri="";
 
@@ -43,6 +44,15 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent capture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(capture, CAMERA_REQUEST);
+            }
+        });
+
+        gotoPop = (ImageView) findViewById(R.id.iv_pop);
+        gotoPop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pop = new Intent(MainActivity.this, PopMemes.class);
+                startActivity(pop);
             }
         });
     }

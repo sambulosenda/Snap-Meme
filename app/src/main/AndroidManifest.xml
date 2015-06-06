@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="gmsyrimis.c4q.nyc.cammy" >
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.CAMERA">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" >
     </uses-permission>
-    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" >
     </uses-permission>
-    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"></uses-permission>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -32,7 +33,15 @@
         </activity>
         <activity
             android:name=".VanillaActivity"
-            android:label="Vanilla">
+            android:label="Vanilla" >
+        </activity>
+        <activity
+            android:name=".PopMemes"
+            android:label="@string/title_activity_pop_memes" >
+        </activity>
+        <activity
+            android:name=".PopMemeEditor"
+            android:label="@string/title_activity_pop_meme_editor" >
         </activity>
     </application>
 
