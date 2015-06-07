@@ -1,15 +1,22 @@
 package gmsyrimis.c4q.nyc.cammy;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 
@@ -29,6 +36,7 @@ public class PopMemeEditor extends Activity {
 
     EditText topRow;
     EditText bottomRow;
+    private Button shareBt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +63,29 @@ public class PopMemeEditor extends Activity {
         int popId = Integer.parseInt(imageUri);
         ivCustomPopular.setImageDrawable(getResources().getDrawable(popId));
 
+        shareBt = (Button)findViewById(R.id.btsharing);
+        shareBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("image/jpeg");
+                ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+                File f = new File(Environment.getExternalStorageDirectory() + File.separator + "temporary_file.jpg");
+                try {
+                    f.createNewFile();
+                    FileOutputStream fo = new FileOutputStream(f);
+                    fo.write(bytes.toByteArray());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                share.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///sdcard/temporary_file.jpg"));
+                startActivity(Intent.createChooser(share, "Share Image"));
+
+            }
+        });
     }
 
     @Override

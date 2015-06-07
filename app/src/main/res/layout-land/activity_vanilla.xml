@@ -27,22 +27,6 @@
         android:text="HAS A CAT"
         android:textColor="#ffffff"
         android:textSize="50dp"
-        android:layout_weight="0.87"
+        android:layout_weight="1"
         android:gravity="center|bottom"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
-        android:layout_gravity="right" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Share"
-        android:id="@+id/btShare" />
-
 </LinearLayout>
