@@ -20,7 +20,7 @@ public class SelectStyleActivity extends Activity {
     ImageView chooseDemotivational;
     ImageView chooseVanilla;
 
-    private String imageUri="";
+    private String imageUri = "";
 
     public static String IMAGE_URI_KEY = "uri";
 
@@ -31,8 +31,7 @@ public class SelectStyleActivity extends Activity {
 
         if (savedInstanceState == null) {
             Bundle bundle = getIntent().getExtras();
-            if(bundle.getString(IMAGE_URI_KEY) != null)
-            {
+            if (bundle.getString(IMAGE_URI_KEY) != null) {
                 imageUri = bundle.getString(IMAGE_URI_KEY);
             }
         } else {

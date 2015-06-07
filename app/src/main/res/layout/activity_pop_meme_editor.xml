@@ -8,6 +8,24 @@
     tools:context="gmsyrimis.c4q.nyc.cammy.PopMemeEditor"
     android:background="@drawable/backgroundfinal">
 
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linear_pop_layout">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SATURDAY"
+            android:textColor="#ffffff"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/top_pop"
+            android:capitalize="characters"/>
+
     <ImageView
         android:layout_width="350dp"
         android:layout_height="350dp"
@@ -18,41 +36,32 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SATURDAY"
-        android:textColor="#ffffff"
-        android:textSize="50dp"
-        android:gravity="center"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:id="@+id/top_pop"
-        android:capitalize="characters"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="EAT POPCORN"
         android:textColor="#ffffff"
-        android:textSize="50dp"
+        android:layout_marginTop="-60dp"
+        android:textSize="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="75dp"
         android:id="@+id/bottom_pop"
         android:capitalize="characters"/>
+
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="share"
-        android:id="@+id/btsharing"
+        android:text="save"
+        android:id="@+id/bt_save_popo"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button3"
+        android:text="Share"
+        android:id="@+id/bt_share_popo"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 

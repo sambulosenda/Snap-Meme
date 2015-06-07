@@ -6,44 +6,67 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="gmsyrimis.c4q.nyc.cammy.PopMemeEditor"
-    android:background="@drawable/backgroundfinal"
-    >
+    android:background="@drawable/backgroundfinal">
 
-    <ImageView
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/pop_meme_lilout">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="SATURDAY"
+            android:textColor="#ffffff"
+            android:textSize="35dp"
+            android:gravity="center"
+            android:id="@+id/top_pop"
+            android:capitalize="characters"
+            android:layout_alignTop="@+id/iv_custom_popular"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
         android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_height="220dp"
         android:background="#383838"
+        android:layout_marginTop="5dp"
         android:layout_centerInParent="true"
         android:id="@+id/iv_custom_popular"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SATURDAY"
-        android:textColor="#ffffff"
-        android:textSize="50dp"
-        android:gravity="center"
-        android:id="@+id/top_pop"
-        android:capitalize="characters"
-        android:paddingTop="-10dp"
-        android:layout_marginTop="-10dp"
-        android:layout_alignTop="@+id/iv_custom_popular"
-        android:layout_alignParentStart="true" />
-
-    <EditText
+        <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="EAT POPCORN"
         android:textColor="#ffffff"
-        android:textSize="50dp"
+        android:textSize="35dp"
         android:gravity="center"
         android:id="@+id/bottom_pop"
         android:capitalize="characters"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-20dp"
+        android:layout_margin="5dp"
         android:layout_alignParentStart="true" />
 
+    </LinearLayout>
 
+    <Button
+        android:id="@+id/bt_save_popo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/pop_meme_lilout"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="72dp"
+        android:text="Save"/>
 
+    <Button
+        android:id="@+id/bt_share_popo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/pop_meme_lilout"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="197dp"
+        android:text="Share"/>
 
 </RelativeLayout>

@@ -50,28 +50,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VanillaActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="VanillaActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/VanillaActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="2280">
-              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3298969" vertical-offset="716" max-vertical-offset="2595">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
-                <element signature="e#2456#3409#0" expanded="true" />
-                <element signature="e#3398#3399#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DemotivationalActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/DemotivationalActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0442477" vertical-offset="1776" max-vertical-offset="2400">
-              <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2628#2821#0" expanded="true" />
-                <element signature="e#2810#2811#0" expanded="true" />
+                <element signature="e#2459#2611#0" expanded="true" />
+                <element signature="e#2600#2601#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,13 +66,66 @@
       <file leaf-file-name="PopMemeEditor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/PopMemeEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="829" max-vertical-offset="1320">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2295">
+              <caret line="155" column="6" selection-start-line="155" selection-start-column="6" selection-end-line="155" selection-end-column="6" />
               <folding>
-                <element signature="e#2027#2979#0" expanded="true" />
-                <element signature="e#2968#2969#0" expanded="true" />
+                <element signature="e#2528#3478#0" expanded="true" />
+                <element signature="e#3467#3468#0" expanded="true" />
+                <element signature="e#3516#3730#0" expanded="true" />
+                <element signature="e#3719#3720#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DemotivationalActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/DemotivationalActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1571" max-vertical-offset="2145">
+              <caret line="126" column="0" selection-start-line="126" selection-start-column="2" selection-end-line="141" selection-end-column="7" />
+              <folding>
+                <element signature="e#2717#2922#0" expanded="true" />
+                <element signature="e#2911#2912#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="388" max-vertical-offset="1080">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PopMemes.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/PopMemes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1020">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_pop_meme_editor.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pop_meme_editor.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.888889" vertical-offset="66" max-vertical-offset="1125">
+              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+              <folding>
+                <element signature="e#227#262#0" expanded="true" />
+                <element signature="e#288#323#0" expanded="true" />
+                <element signature="e#347#380#0" expanded="true" />
+                <element signature="e#407#440#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1417,20 +1456,22 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_pop_meme_editor.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pop_memes.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_select_style.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_vanilla.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pop_meme_editor.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_style.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/row_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/PopMemeEditor.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/VanillaActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_demotivational.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_demotivational.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/FakeBitmapDrawable.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_pop_meme_editor.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pop_meme_editor.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/DemotivationalActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/PopMemeEditor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/VanillaActivity.java" />
       </list>
     </option>
   </component>
@@ -1603,6 +1644,28 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activity_pop_meme_editor.xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Snap-Meme" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
@@ -1663,6 +1726,7 @@
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="d4481293" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_4_API_21" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1883,7 +1947,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.381113" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6256324" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1958,8 +2022,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="e#2456#3409#0" expanded="true" />
-            <element signature="e#3398#3399#0" expanded="true" />
+            <element signature="e#2459#2611#0" expanded="true" />
+            <element signature="e#2600#2601#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1969,8 +2033,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1125">
           <caret line="54" column="45" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="45" />
           <folding>
-            <element signature="e#2027#2979#0" expanded="true" />
-            <element signature="e#2968#2969#0" expanded="true" />
+            <element signature="e#2528#3478#0" expanded="true" />
+            <element signature="e#3467#3468#0" expanded="true" />
+            <element signature="e#3516#3730#0" expanded="true" />
+            <element signature="e#3719#3720#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2045,8 +2111,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1200">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="e#2456#3409#0" expanded="true" />
-            <element signature="e#3398#3399#0" expanded="true" />
+            <element signature="e#2459#2611#0" expanded="true" />
+            <element signature="e#2600#2601#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2056,8 +2122,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1125">
           <caret line="54" column="45" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="45" />
           <folding>
-            <element signature="e#2027#2979#0" expanded="true" />
-            <element signature="e#2968#2969#0" expanded="true" />
+            <element signature="e#2528#3478#0" expanded="true" />
+            <element signature="e#3467#3468#0" expanded="true" />
+            <element signature="e#3516#3730#0" expanded="true" />
+            <element signature="e#3719#3720#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2121,8 +2189,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2456#3409#0" expanded="true" />
-            <element signature="e#3398#3399#0" expanded="true" />
+            <element signature="e#2459#2611#0" expanded="true" />
+            <element signature="e#2600#2601#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2170,17 +2238,6 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_pop_meme_editor.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09063444" vertical-offset="225" max-vertical-offset="825">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
@@ -2266,22 +2323,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5916399" vertical-offset="690" max-vertical-offset="1110">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/PopMemes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1020">
-          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pop_memes.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
@@ -2304,44 +2345,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pop_meme_editor.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8148148" vertical-offset="581" max-vertical-offset="990">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/PopMemeEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="829" max-vertical-offset="1320">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="e#2027#2979#0" expanded="true" />
-            <element signature="e#2968#2969#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/VanillaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="2280">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding>
-            <element signature="e#2456#3409#0" expanded="true" />
-            <element signature="e#3398#3399#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2383,14 +2391,93 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/FakeBitmapDrawable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46902654" vertical-offset="81" max-vertical-offset="855">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_pop_meme_editor.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28093645" vertical-offset="441" max-vertical-offset="1170">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#227#262#0" expanded="true" />
+            <element signature="e#288#323#0" expanded="true" />
+            <element signature="e#347#380#0" expanded="true" />
+            <element signature="e#407#440#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pop_meme_editor.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.888889" vertical-offset="66" max-vertical-offset="1125">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding>
+            <element signature="e#227#262#0" expanded="true" />
+            <element signature="e#288#323#0" expanded="true" />
+            <element signature="e#347#380#0" expanded="true" />
+            <element signature="e#407#440#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1080">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/PopMemes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1020">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/DemotivationalActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0442477" vertical-offset="1776" max-vertical-offset="2400">
-          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1571" max-vertical-offset="2145">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="2" selection-end-line="141" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2628#2821#0" expanded="true" />
-            <element signature="e#2810#2811#0" expanded="true" />
+            <element signature="e#2717#2922#0" expanded="true" />
+            <element signature="e#2911#2912#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/PopMemeEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2295">
+          <caret line="155" column="6" selection-start-line="155" selection-start-column="6" selection-end-line="155" selection-end-column="6" />
+          <folding>
+            <element signature="e#2528#3478#0" expanded="true" />
+            <element signature="e#3467#3468#0" expanded="true" />
+            <element signature="e#3516#3730#0" expanded="true" />
+            <element signature="e#3719#3720#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/gmsyrimis/c4q/nyc/cammy/VanillaActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3298969" vertical-offset="716" max-vertical-offset="2595">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <element signature="e#2459#2611#0" expanded="true" />
+            <element signature="e#2600#2601#0" expanded="true" />
           </folding>
         </state>
       </provider>

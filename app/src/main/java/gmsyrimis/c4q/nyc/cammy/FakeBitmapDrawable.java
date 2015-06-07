@@ -8,8 +8,8 @@ import android.graphics.drawable.BitmapDrawable;
 
 public class FakeBitmapDrawable extends BitmapDrawable {
 
-    int degree;
-    Bitmap bitmap;
+    private int degree;
+    private Bitmap bitmap;
     private Paint paint;
 
     FakeBitmapDrawable(Bitmap bitmap, int degree) {
@@ -18,25 +18,20 @@ public class FakeBitmapDrawable extends BitmapDrawable {
         this.paint = new Paint();
         this.degree = degree;
     }
-
     @Override
     public int getIntrinsicWidth() {
-        if (degree == 90 || degree == 270){
+        if (degree == 90 || degree == 270) {
             return bitmap.getHeight();
-        }else
+        } else
             return bitmap.getWidth();
-
     }
-
     @Override
     public int getIntrinsicHeight() {
-        if (degree == 90 || degree == 270){
+        if (degree == 90 || degree == 270) {
             return bitmap.getWidth();
-        }else
+        } else
             return bitmap.getHeight();
-
     }
-
     @Override
     public void draw(Canvas canvas) {
         switch (degree) {
@@ -55,8 +50,6 @@ public class FakeBitmapDrawable extends BitmapDrawable {
             default:
                 canvas.drawBitmap(bitmap, 0, 0, paint);
                 break;
-
         }
-
     }
 }

@@ -10,15 +10,14 @@ import android.widget.ImageView;
 
 
 public class MainActivity extends Activity {
-
+    // ELEMENTS
     ImageView gotoCamera;
     ImageView gotoGallery;
     ImageView gotoPop;
-
-    private String imageUri="";
-
+    // KEY VALUE PAIRS
+    private String imageUri = "";
     public static String IMAGE_URI_KEY = "uri";
-
+    // FLAGS
     private static final int CAMERA_REQUEST = 1;
     private static final int SELECT_SINGLE_PICTURE = 1;
 
@@ -26,8 +25,11 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        // FINDING VIEWS
         gotoGallery = (ImageView) findViewById(R.id.iv_gallery);
+        gotoCamera = (ImageView) findViewById(R.id.iv_camera);
+        gotoPop = (ImageView) findViewById(R.id.iv_pop);
+        // GALLERY BUTTON
         gotoGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,8 +39,7 @@ public class MainActivity extends Activity {
                 }
             }
         });
-
-        gotoCamera = (ImageView) findViewById(R.id.iv_camera);
+        // CAMERA BUTTON
         gotoCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,8 +47,7 @@ public class MainActivity extends Activity {
                 startActivityForResult(capture, CAMERA_REQUEST);
             }
         });
-
-        gotoPop = (ImageView) findViewById(R.id.iv_pop);
+        // POPULAR MEMES BUTTON
         gotoPop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,8 +57,8 @@ public class MainActivity extends Activity {
         });
     }
 
-    private void gotoSelectStyle(){
-        Intent selectStyle = new Intent(MainActivity.this,SelectStyleActivity.class);
+    private void gotoSelectStyle() {
+        Intent selectStyle = new Intent(MainActivity.this, SelectStyleActivity.class);
         selectStyle.putExtra(IMAGE_URI_KEY, imageUri);
         startActivity(selectStyle);
     }
@@ -69,14 +69,12 @@ public class MainActivity extends Activity {
                 Uri selectedImage = data.getData();
                 imageUri = selectedImage.toString();
                 gotoSelectStyle();
-            }
-            else if (requestCode == SELECT_SINGLE_PICTURE && resultCode == RESULT_OK && null != data) {
+            } else if (requestCode == SELECT_SINGLE_PICTURE && resultCode == RESULT_OK && null != data) {
                 Uri selectedImage = data.getData();
                 imageUri = selectedImage.toString();
                 gotoSelectStyle();
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
         }
     }
 }

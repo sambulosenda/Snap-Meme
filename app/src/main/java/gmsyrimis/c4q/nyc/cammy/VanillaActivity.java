@@ -27,7 +27,7 @@ public class VanillaActivity extends Activity {
     LinearLayout ivVanilla;
     Bitmap bitmap;
 
-    private String imageUri="";
+    private String imageUri = "";
     public static String IMAGE_URI_KEY = "uri";
 
     private String topText;
@@ -73,33 +73,58 @@ public class VanillaActivity extends Activity {
         bitmap = Bitmap.createScaledBitmap(bitmap, metrics.widthPixels, metrics.heightPixels, true);
         ivVanilla.setBackground(new FakeBitmapDrawable(bitmap, 0));
 
-        shareBt = (Button)findViewById(R.id.btShare);
+        shareBt = (Button) findViewById(R.id.btShare);
         shareBt.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-
-                Intent share = new Intent(Intent.ACTION_SEND);
-                share.setType("image/jpeg");
-                ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-                File f = new File(Environment.getExternalStorageDirectory() + File.separator + "temporary_file.jpg");
-                try {
-                    f.createNewFile();
-                    FileOutputStream fo = new FileOutputStream(f);
-                    fo.write(bytes.toByteArray());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                share.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///sdcard/temporary_file.jpg"));
-                startActivity(Intent.createChooser(share, "Share Image"));
-
-
+            public void onClick(View v) {
+                process(ivVanilla);
             }
         });
 
-
     }
+
+
+    public void process(View view){
+
+        Bitmap screenshot = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(screenshot);
+        view.layout(0, 0, view.getLayoutParams().width, view.getLayoutParams().height);
+        view.draw(canvas);
+        String imageFileName = new SimpleDateFormat("yyyy-MM-dd-HH.mm.ss").format(new Date());
+        String filename = "Snapmeme" + imageFileName + ".jpeg";
+        File picDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        File outputFile = null;
+        try {
+            outputFile = File.createTempFile(filename, ".jpg", picDir);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        FileOutputStream out = null;
+        try {
+            out = new FileOutputStream(outputFile);
+            screenshot.compress(Bitmap.CompressFormat.JPEG, 100, out);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (out != null) {
+                    out.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        //if(view.getId() == R.id.sendImage){
+            Uri imageUri = Uri.fromFile(outputFile);
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("image/*");
+            intent.putExtra(Intent.EXTRA_STREAM,imageUri);
+            intent.putExtra(Intent.EXTRA_TEXT,"Hey I have attached this picture");
+            Intent chooser = Intent.createChooser(intent,"Send Picture");
+            startActivity(chooser);
+       // }
+    }
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -110,7 +135,7 @@ public class VanillaActivity extends Activity {
     }
 
     public static Bitmap screenView(View v, int width, int height) {
-        Bitmap screenshot = Bitmap.createBitmap(width , height, Bitmap.Config.ARGB_8888);
+        Bitmap screenshot = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         Canvas c = new Canvas(screenshot);
         v.layout(0, 0, v.getLayoutParams().width, v.getLayoutParams().height);
         v.draw(c);
@@ -134,10 +159,6 @@ public class VanillaActivity extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-        //outputDir.mkdirs();
-
 
         FileOutputStream out = null;
         try {
