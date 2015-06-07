@@ -12,7 +12,7 @@
         android:layout_width="360dp"
         android:layout_height="380dp"
         android:orientation="vertical"
-        android:id="@+id/demotivational_full"
+        android:id="@+id/demotivational_holder"
         >
     <ImageView
         android:layout_width="330dp"
@@ -51,12 +51,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Share"
-        android:id="@+id/buttonShare" />
+        android:id="@+id/share_btn" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"
-        android:id="@+id/btSave" />
+        android:id="@+id/save_btn" />
 
 </LinearLayout>

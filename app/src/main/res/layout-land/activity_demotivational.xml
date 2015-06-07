@@ -51,18 +51,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"
-        android:id="@+id/btSave"
+        android:id="@+id/save_btn"
         android:layout_gravity="right"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/buttonShare" />
+        android:layout_alignStart="@+id/share_btn" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Share"
-        android:id="@+id/buttonShare"
+        android:id="@+id/share_btn"
         android:layout_gravity="right"
-        android:layout_above="@+id/btSave"
+        android:layout_above="@+id/save_btn"
         android:layout_toEndOf="@+id/demotivational_full"
         android:layout_marginStart="63dp" />
 

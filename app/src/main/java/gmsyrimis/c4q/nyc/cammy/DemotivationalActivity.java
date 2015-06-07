@@ -23,15 +23,15 @@ import java.util.Date;
 
 public class DemotivationalActivity extends Activity {
 
-
     //ELEMENTS
     private ImageView pictureHolder;
     private Bitmap bitmap;
     private LinearLayout layoutHolder;
     private Button saveBTN;
-    private Button shareBt;
+    private Button shareBTN;
     private EditText topEditText;
     private EditText bottomEditText;
+
     // KEY VALUE PAIRS
     private String imageUri = "";
     public static String IMAGE_URI_KEY = "uri";
@@ -44,13 +44,15 @@ public class DemotivationalActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demotivational);
+
         // FINDING VIEWS
-        layoutHolder = (LinearLayout) findViewById(R.id.demotivational_full);
+        layoutHolder = (LinearLayout) findViewById(R.id.demotivational_holder);
         pictureHolder = (ImageView) findViewById(R.id.demotivational_custom_image);
         topEditText = (EditText) findViewById(R.id.demotivational_top_text);
         bottomEditText = (EditText) findViewById(R.id.demotivational_bottom_text);
-        shareBt = (Button) findViewById(R.id.buttonShare);
-        saveBTN = (Button) findViewById(R.id.btSave);
+        shareBTN = (Button) findViewById(R.id.share_btn);
+        saveBTN = (Button) findViewById(R.id.save_btn);
+
         // LOADING
         if (savedInstanceState == null) {
             imageUri = getIntent().getExtras().getString(IMAGE_URI_KEY);
@@ -61,7 +63,8 @@ public class DemotivationalActivity extends Activity {
             topString = savedInstanceState.getString(TOP_TEXT_KEY);
             bottomString = savedInstanceState.getString(BOTTOM_TEXT_KEY);
         }
-        // SETTING VALUES
+
+        // SETTING VALUES TO STRINGS AND IMAGEHOLDER
         topEditText.setText(topString);
         bottomEditText.setText(bottomString);
         try {
@@ -71,77 +74,77 @@ public class DemotivationalActivity extends Activity {
         }
         bitmap = Bitmap.createScaledBitmap(bitmap, 330, 210, true);
         pictureHolder.setImageDrawable(new FakeBitmapDrawable(bitmap, 0));
+
         // SAVE BUTTON
         saveBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveIt(layoutHolder, layoutHolder.getWidth(), layoutHolder.getHeight());
+                Uri resultUri = makeViewBitmap(layoutHolder, layoutHolder.getWidth(), layoutHolder.getHeight());
+                Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                mediaScanIntent.setData(resultUri);
+                sendBroadcast(mediaScanIntent);
+            }
+        });
+        
+        // SHARE BUTTON
+        shareBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri resultUri = makeViewBitmap(layoutHolder, layoutHolder.getWidth(), layoutHolder.getHeight());
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("image/*");
+                intent.putExtra(Intent.EXTRA_STREAM, resultUri);
+                intent.putExtra(Intent.EXTRA_TEXT, "");
+                Intent chooser = Intent.createChooser(intent, "Send Picture");
+                startActivity(chooser);
             }
         });
 
     }
 
-    public static Bitmap screenView(View v, int width, int height) {
-        Bitmap screenshot = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        Canvas c = new Canvas(screenshot);
-        v.layout(0, 0, v.getLayoutParams().width, v.getLayoutParams().height);
-        v.draw(c);
-        return screenshot;
-    }
 
-    public void saveIt(View memeView, int width, int height) {
-        Bitmap sharable = screenView(memeView, width, height);
+    public Uri makeViewBitmap(View view, int width, int height) {
+        // VIEW TO BITMAP
+        Bitmap viewBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas c = new Canvas(viewBitmap);
+        view.layout(0, 0, view.getLayoutParams().width, view.getLayoutParams().height);
+        view.draw(c);
+
         // FILE SETUP
-        String imageFileName = new SimpleDateFormat("yyyy-MM-dd-HH.mm.ss").format(new Date());
-        String filename = "Snapmeme" + imageFileName + ".jpeg";
-        File picDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        File outputFile = null;
+        String uniqueIdentifier = new SimpleDateFormat("yyyy-MM-dd-HH.mm.ss").format(new Date());
+        String fileName = "Snapmeme" + uniqueIdentifier;
+        File fileDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+
+        // CREATING TEMP FILE
+        File imageFILE = null;
         try {
-            outputFile = File.createTempFile(filename, ".jpg", picDir);
+            imageFILE = File.createTempFile(fileName, ".jpg", fileDirectory);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // STREAM
-        FileOutputStream out = null;
+
+        // STREAM INTO TEMP FILE
+        FileOutputStream outputStream = null;
         try {
-            out = new FileOutputStream(outputFile);
-            sharable.compress(Bitmap.CompressFormat.JPEG, 100, out);
-        } catch (Exception e) {
+            outputStream = new FileOutputStream(imageFILE);
+            viewBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
+        }
+        catch (Exception e) {
             e.printStackTrace();
-        } finally {
+        }
+        finally {
             try {
-                if (out != null) {
-                    out.close();
+                if (outputStream != null) {
+                    outputStream.close();
                 }
-            } catch (IOException e) {
+            }
+            catch (IOException e) {
                 e.printStackTrace();
             }
         }
         // URI TO BE PASSED
-        Uri resultUri = Uri.fromFile(outputFile);
-        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-        mediaScanIntent.setData(resultUri);
-        this.sendBroadcast(mediaScanIntent);
+        return Uri.fromFile(imageFILE);
     }
-
-//    public void process(View view){
-//
-//
-//
-//
-//
-//        if(view.getId() == R.id.sendImage){
-//            Uri imageUri = Uri.parse("android.resource://com.example.android.implicitintentexample/drawable" + R.mipmap.ic_launcher);
-//            intent = new Intent(Intent.ACTION_SEND);
-//            intent.setType("image/*");
-//            intent.putExtra(Intent.EXTRA_STREAM,imageUri);
-//            intent.putExtra(Intent.EXTRA_TEXT,"Hey I have attached this picture");
-//            chooser = Intent.createChooser(intent,"Send Picture");
-//            startActivity(chooser);
-//        }
-//    }
-
-
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
