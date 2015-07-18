@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/charlynbuchanan/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-2db2be9f1f3bb0c228be0b048627f6182d443ed1.jar" />
+    </item>
+    <item
+        jar="/Users/charlynbuchanan/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-android/4.47/c72f9ed54d8a8bab3fbf56da2b358308a67899a4/ormlite-android-4.47.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c72f9ed54d8a8bab3fbf56da2b358308a67899a4">
+        <dex dex="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/pre-dexed/debug/ormlite-android-4.47-ac793bf2b38a597463109109d763629723b67a0c.jar" />
+    </item>
+    <item
+        jar="/Users/charlynbuchanan/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/4.47/e11abddd1e9c2053a92133fa83f78f7bedb820a9/ormlite-core-4.47.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e11abddd1e9c2053a92133fa83f78f7bedb820a9">
+        <dex dex="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/pre-dexed/debug/ormlite-core-4.47-53c8dd6ef154aed342988f6db569fefdf42b441a.jar" />
+    </item>
+    <item
+        jar="/Users/charlynbuchanan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-7a3a478f8a36698aaecf8c6c654db0412c4241f3.jar" />
+    </item>
+    <item
+        jar="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/pre-dexed/debug/classes-06a60e2c18328b0cd5068e808a4b56cdcae0554c.jar" />
+    </item>
+    <item
+        jar="/Users/charlynbuchanan/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-ce13b0bd0b2ddc0fc88b0e5b08dd002919903b41.jar" />
+    </item>
+    <item
+        jar="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/pre-dexed/debug/classes-354c7a42b2a0a0c3f7b508bc879e07b65c625ae5.jar" />
+    </item>
+    <item
+        jar="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/charlynbuchanan/Desktop/Snap-Meme/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-20864f31184c4b92623f8d4484124289d18c1430.jar" />
+    </item>
+
+</items>

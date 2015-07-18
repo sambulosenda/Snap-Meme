@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
         gotoPop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pop = new Intent(MainActivity.this, PopMemes.class);
+                Intent pop = new Intent(MainActivity.this, PopMemesActivity.class);
                 startActivity(pop);
             }
         });
